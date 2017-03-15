@@ -1,4 +1,12 @@
 class ResumesController < ApplicationController
+
+  def show
+
+    id = params[:user_id]
+
+    @user = Unirest.get("http://localhost:3000/api/students/#{id}").body
+    
+  end
   def edit
 
     id = params[:id]
