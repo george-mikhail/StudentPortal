@@ -2,7 +2,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :null_session
 
   def current_user
-  @current_user ||= Unirest.get("http://[xx]api/v1/resumes/#{id}").body if session[:user_id]
+  id = session[:user_id]
+  @current_user ||= Unirest.get("http://localhost:3000/api/students/#{id}").body if id
   end
   helper_method :current_user
 
@@ -10,5 +11,4 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
-end
 end
