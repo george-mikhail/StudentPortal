@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get "/students/:id" => "resumes#show"
+  get "/students" => "resumes#show"
 
 
   get "/students/:id/edit" => "resumes#edit"
