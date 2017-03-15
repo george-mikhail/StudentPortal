@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   get "/students" => "resumes#show"
 
 
-  get "/students/:id/edit" => "resumes#edit"
+  get "/students/edit" => "resumes#edit"
 
 
-  patch "/students/:id" => "resumes#update"
+  patch "/students" => "resumes#update"
 
   get "/login" => "sessions#new"
 

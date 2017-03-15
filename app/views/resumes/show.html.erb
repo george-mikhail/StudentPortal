@@ -1,18 +1,16 @@
 <h1>Student Information</h1>
 
-<p> First Name <%= @user.first_name %> </p>
-<p> Last Name <%= @user.last_name %> </p>
-<p> Email <%= @user.email %> </p>
-<p> Password <%= @user.password %> </p>
-<p> Phone Number <%= @user.phone_number %> </p>
-<p> Short Bio <%= @user.short_bio %> </p>
-<p> LinkedIn <%= @user.linkedin_url %> </p>
-<p> Twitter <%= @user.twitter_handle %> </p>
-<p> Website <%= @user.website_url %> </p>
-<p> Online Resumé <%= @user.online_resume %> </p>
-<p> Github <%= @user.github_url %> </p>
+<p> First Name: <%= @user['first_name'] %> </p>
+<p> Last Name: <%= @user['last_name'] %> </p>
+<p> Email: <%= @user['email'] %> </p>
+<p> Phone Number: <%= @user['phone_number'] %> </p>
+<p> Short Bio: <%= @user['short_bio'] %> </p>
+<p> LinkedIn: <%= @user['linkedin_url'] %> </p>
+<p> Twitter: <%= @user['twitter_handle'] %> </p>
+<p> Website: <%= @user['website_url'] %> </p>
+<p> Online Resumé: <%= @user['online_resume'] %> </p>
+<p> Github Account: <%= @user['github_url'] %> </p>
 
- <% end %>
 
 
 
