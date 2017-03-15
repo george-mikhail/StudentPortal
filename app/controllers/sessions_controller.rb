@@ -18,7 +18,10 @@ class SessionsController < ApplicationController
     if my_password == params[:password]
       #encrypt password            #not encrypt
     # if user && user.authenticate(params[:password])
-       session[:user_id] = user[:id]
+       session[:user_id] = user["id"]
+       puts "****"
+       puts user["id"]
+       puts "****"
        flash[:success] = 'Successfully logged in!'
         redirect_to '/students'
         else
