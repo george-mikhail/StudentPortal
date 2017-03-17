@@ -1,12 +1,12 @@
 class CapstonesController < ApplicationController
-  def show
+  def index
 
     id = session[:user_id]
 
     @user = Unirest.get("http://localhost:3000/api/students/#{id}").body
-    @capstones = @user['capstones']
-    
+    @capstones = @user['capstones'] 
   end
+  
   def edit
 
     id = params[:capstone_id]
