@@ -1,0 +1,11 @@
+<h1>Education</h1>
+
+<p> Start Date: <%= @education['start_date'] %> </p>
+<p> End Date: <%= @education['end_date'] %> </p>
+<p> Degree: <%= @education['degree'] %> </p>
+<p> University Name: <%= @education['university_name'] %> </p>
+<p> Details: <%= @education['details'] %> </p>
+
+<%= link_to "Edit Education", "/educations/#{@education['id']}/edit", class: "btn btn-success" %>
+
+<%= link_to "Logout", "/logout", class: "btn btn-success" %>
