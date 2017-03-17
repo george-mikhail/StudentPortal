@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     id = params[:user_id]
     user = Unirest.get("http://localhost:3000/api/students/#{id}").body #will return a hash with student info for a particular student id
 
-    my_password = BCrypt::Password.new(user['password_digest'])
+    my_password = BCrypt::Password.new(user['password'])
 
 
     if my_password == params[:password]
