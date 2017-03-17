@@ -1,0 +1,16 @@
+<%= form_tag "/experiences", method: :post do %>
+
+  <%= label_tag :company_name %><br>
+  <%= text_field_tag :company_name %><br>
+  <%= label_tag :job_title %><br>
+  <%= text_field_tag :job_title %><br>
+  <%= label_tag :start_date %><br>
+  <%= text_field_tag :start_date %><br>
+  <%= label_tag :end_date %><br>
+  <%= text_field_tag :end_date %><br>
+  <%= label_tag :details %><br>
+  <%= text_field_tag :details %><br>
+
+  <%= submit_tag "Create New Experience" %>
+
+<% end %>

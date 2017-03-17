@@ -4,12 +4,14 @@ class CapstonesController < ApplicationController
     id = params[:user_id]
 
     @user = Unirest.get("http://localhost:3000/api/students/capstones/#{id}").body
+    @capstones = @user['capstones']
     
   end
   def edit
 
     id = params[:id]
     @resume = Unirest.get("http://localhost:3000/api/students/capstones/#{id}").body
+    @capstones = @user['capstones']
     
   end
 
