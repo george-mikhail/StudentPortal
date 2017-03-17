@@ -1,0 +1,14 @@
+<h1>Experiences</h1>
+<a href="/experiences/new">Create New Experience</a>
+<% @experiences.each do |experience| %>
+<div>
+  <h3>Company: <%= experience['company_name'] %></h3>
+  <p>Job Title: <%= experience['job_title'] %></p>
+  <p>Start Date: <%= experience['start_date'] %></p>
+  <p>End Date: <%= experience['end_date'] %></p>
+  <p>Details: <%= experience['details'] %></p>
+
+<a href="/experiences/<%= experience['id'] %>/edit">Edit this Experience</a>
+</div>
+
+<% end %>
