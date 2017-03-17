@@ -1,1 +1,14 @@
-edit.html.erb
+<%= form_tag "/capstones/#{@user.id}", method: :patch do %>
+  
+  <%= label_tag :capstone_name %><br>
+  <%= text_field_tag :capstone_name, @user['capstone_name'] %><br>
+  <%= label_tag :short_description %><br>
+  <%= text_field_tag :short_description, @user['short_description'] %><br>
+  <%= label_tag :website_url %><br>
+  <%= text_field_tag :website_url, @user['website_url'] %><br>
+  <%= label_tag :github_url %><br>
+  <%= text_field_tag :github_url, @user['github_url'] %><br>
+
+  <%= submit_tag "Submit Update" %>
+<% end %>
+<%= link_to "Logout", "/logout", class: "btn btn-success" %>

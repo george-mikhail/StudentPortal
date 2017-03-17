@@ -1,28 +1,30 @@
 <h1>Update your info!</h1>
-<%= form_tag "[XX]/resumes/#{@resume['id']}", :method => :patch do %>
-  <%= label_tag :first_name %>
-  <%= text_field_tag :first_name %>
-  <%= label_tag :last_name %>
-  <%= text_field_tag :last_name %>
-  <%= label_tag :email %>
-  <%= text_field_tag :email %>
-  <%= label_tag :password %>
-  <%= text_field_tag :password %>
-  <%= label_tag :phone_number %>
-  <%= text_field_tag :phone_number %>
-  <%= label_tag :short_bio %>
-  <%= text_field_tag :short_bio %>
-  <%= label_tag :linkedin_url %>
-  <%= text_field_tag :linkedin_url %>
-  <%= label_tag :twitter_handle %>
-  <%= text_field_tag :twitter_handle %>
-  <%= label_tag :website_url %>
-  <%= text_field_tag :website_url %>
-  <%= label_tag :online_resume %>
-  <%= text_field_tag :online_resume %>
-  <%= label_tag :github_url %>
-  <%= text_field_tag :github_url %>
 
+<%= form_tag "/students", method: :patch do %>
+  <%= label_tag :first_name %><br>
+  <%= text_field_tag :first_name, @user['first_name'] %><br>
+  <%= label_tag :last_name %><br>
+  <%= text_field_tag :last_name, @user['last_name']%><br>
+  <%= label_tag :email %><br>
+  <%= text_field_tag :email, @user['email'] %><br>
+  
+  <%= label_tag :phone_number %><br>
+  <%= text_field_tag :phone_number, @user['phone_number'] %><br>
+  <%= label_tag :short_bio %><br>
+  <%= text_field_tag :short_bio, @user['short_bio'] %><br>
+  <%= label_tag :linkedin_url %><br>
+  <%= text_field_tag :linkedin_url, @user['linkedin_url'] %><br>
+  <%= label_tag :twitter_handle %><br>
+  <%= text_field_tag :twitter_handle, @user['twitter_handle']%><br>
+  <%= label_tag :website_url %><br>
+  <%= text_field_tag :website_url, @user['website_url'] %><br>
+  <%= label_tag :online_resume_url %><br>
+  <%= text_field_tag :online_resume_url, @user['online_resume_url'] %><br>
+  <%= label_tag :github_url %><br>
+  <%= text_field_tag :github_url, @user['github_url'] %><br>
+  <%= label_tag :photo %><br>
+  <%= text_field_tag :photo, @user['photo'] %><br>
 
   <%= submit_tag "Submit Update" %>
 <% end %>
+<%= link_to "Logout", "/logout", class: "btn btn-success" %>

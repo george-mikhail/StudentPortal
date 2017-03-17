@@ -1,6 +1,15 @@
-<h1>Show me everthing here!</h1>
+<h1>Student Information</h1>
 
+<p> First Name: <%= @user['first_name'] %> </p>
+<p> Last Name: <%= @user['last_name'] %> </p>
+<p> Email: <%= @user['email'] %> </p>
+<p> Phone Number: <%= @user['phone_number'] %> </p>
+<p> Short Bio: <%= @user['short_bio'] %> </p>
+<p> LinkedIn: <%= @user['linkedin_url'] %> </p>
+<p> Twitter: <%= @user['twitter_handle'] %> </p>
+<p> Website: <%= @user['website_url'] %> </p>
+<p> Online Resumé: <%= @user['online_resume'] %> </p>
+<p> Github Account: <%= @user['github_url'] %> </p>
 
-
-
-
+<%= link_to "Edit", "/students/edit", class: "btn btn-success" %>
+<%= link_to "Logout", "/logout", class: "btn btn-success" %>
