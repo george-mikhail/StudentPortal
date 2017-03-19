@@ -1,0 +1,17 @@
+<h1>Update Your Education</h1>
+
+<%= form_tag "/educations/#{@education['id']}", method: :patch do %>
+
+  <%= label_tag :start_date %><br>
+  <%= text_field_tag :start_date, @education['start_date'] %><br>
+  <%= label_tag :end_date %><br>
+  <%= text_field_tag :end_date, @education['end_date']%><br>
+  <%= label_tag :degree %><br>
+  <%= text_field_tag :degree, @education['degree'] %><br>
+  <%= label_tag :university_name %><br>
+  <%= text_field_tag :university_name, @education['university_name'] %><br>
+  <%= label_tag :details %><br>
+  <%= text_field_tag :details, @education['details'] %><br>
+  <%= submit_tag "Edit" %>
+
+  <% end %>

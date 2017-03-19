@@ -1,0 +1,10 @@
+<h1>All Educations</h1>
+<% @educations.each do |education| %>
+<p><%= education['start_date']%></p>
+<p><%= education['end_date']%></p> 
+<p><%= education['degree']%></p> 
+<p><%= education['university_name']%>
+<p><%= education['details']%>
+</p> 
+<%= link_to "Show Education", "/educations/#{education['id']}", class: "btn btn-success" %>
+<% end %>
